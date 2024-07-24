@@ -1,0 +1,29 @@
+# How to Fix Error Mounting /dev/sdb1 at /media/
+
+If you encounter an error message like "Error mounting /dev/sdb1 at /media/", there are several solutions you can try to resolve the issue. This problem often occurs after a hard shutdown or system freeze.
+
+## Solution 1: Fix NTFS Filesystem
+
+1. Run `lsblk` command to identify the drives causing the issue.
+2. If `lsblk` command is not installed, run `sudo apt install util-linux` to install it.
+3. Identify the problematic drives (e.g., `/dev/sdb1`, `/dev/sdc2`).
+4. Run `sudo ntfsfix /dev/sdb1` and `sudo ntfsfix /dev/sdc2` to fix the NTFS filesystem on the respective drives.
+
+## Solution 2: Reinstall Ubuntu NTFS Driver
+
+1. Run `sudo apt install --reinstall ntfs-3g` to reinstall the Ubuntu NTFS driver.
+
+## Solution 3: Edit Mount Options Using Disks
+
+1. Launch Disks utility. You can find it in your menu or Control Center.
+2. Select the drive that will not mount.
+3. Click on the Gears icon or Additional partition options button and choose Edit Mount Options...
+4. Disable User Session Defaults and click OK.
+5. Open Terminal and run `systemctl daemon-reload`.
+6. Repeat the process for each problematic drive.
+
+One of these solutions should allow you to mount or access your drive(s) successfully.
+
+**Note:** Always ensure to back up important data before performing any disk operations.
+
+Hope this helps in resolving the mounting error on your system.
