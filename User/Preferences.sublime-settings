@@ -1,0 +1,9 @@
+{
+	"ignored_packages":
+	[
+		"CPP Competitive Programming Snippets",
+		"CppFastOlympicCoding",
+		"Vintage"
+	],
+	"index_files": false
+}
