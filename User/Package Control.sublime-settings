@@ -1,0 +1,12 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+		"CPP Competitive Programming Snippets",
+		"CppFastOlympicCoding"
+	],
+	"installed_packages":
+	[
+		"Package Control"
+	]
+}
